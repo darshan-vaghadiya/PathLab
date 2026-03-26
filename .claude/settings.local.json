@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"HasUlid\\\\|protected $fillable\\\\|protected function casts\\\\|//\" \"D:/AI Projects/Pathology/app/Models/TestPackageItem.php\")",
+      "Bash(php artisan:*)",
+      "Bash(php -l database/migrations/2024_01_01_000024_add_rejection_fields_to_order_tests.php)",
+      "Bash(php -l app/Models/OrderTest.php)",
+      "Bash(php -l app/Http/Controllers/DoctorController.php)",
+      "Bash(php -l app/Http/Controllers/LabController.php)",
+      "Bash(php -l app/Http/Controllers/LabSettingsController.php)",
+      "Bash(php -l app/Http/Controllers/ReportController.php)",
+      "Bash(php -l resources/views/reports/pdf.blade.php)",
+      "Bash(php -l resources/views/reports/preview-pdf.blade.php)",
+      "Bash(find 'D:/AI Projects/Pathology/node_modules/vue-sonner' -name *.css)",
+      "Bash(php artisan tinker --execute=\":*)",
+      "Bash(npx vite:*)",
+      "Bash(node -e \"const tw = require\\(''tailwindcss''\\); console.log\\(''PostCSS plugin version:'', tw.version || ''unknown''\\)\")",
+      "Bash(node -e \"import\\(''tailwindcss''\\).then\\(m => console.log\\(m.default\\)\\)\")",
+      "Bash(php -l app/Http/Controllers/OrderController.php)",
+      "Bash(php -l resources/views/invoices/receipt.blade.php)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//<style>/,/</**)",
+      "Bash(done)",
+      "Bash(grep -v \"//\")",
+      "Bash(start:*)",
+      "Bash(php -l app/Http/Controllers/PublicReportController.php)",
+      "Bash(php -l resources/views/reports/_design-config.blade.php)",
+      "Bash(php -l app/Http/Controllers/DashboardController.php)",
+      "Bash(ngrok version:*)",
+      "Read(//d//**)",
+      "Bash(ls D:/service*)",
+      "Bash(curl -s http://localhost:8000 -o /dev/null -w \"%{http_code}\")",
+      "Bash(\"D:/Services/ngrok.exe\" http:*)",
+      "Bash(curl -s http://127.0.0.1:4040/api/tunnels)",
+      "Bash(python -m json.tool)",
+      "Bash(npx --help)",
+      "Bash(git --version)",
+      "Bash(git config:*)"
+    ]
+  }
+}

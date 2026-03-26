@@ -60,7 +60,7 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? (
-                env('MYSQL_SSL_VERIFY', true)
+                filter_var(env('MYSQL_SSL_VERIFY', true), FILTER_VALIDATE_BOOLEAN)
                     ? array_filter([
                         (PHP_VERSION_ID >= 80500 ? Mysql::ATTR_SSL_CA : PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
                     ])

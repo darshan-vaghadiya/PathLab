@@ -24,7 +24,7 @@ return new class extends Migration
             $table->enum('payment_mode', ['cash', 'upi', 'card', 'credit'])->nullable();
             $table->decimal('amount_paid', 10, 2)->default(0);
             $table->text('notes')->nullable();
-            $table->foreignId('created_by')->constrained('users')->nullOnDelete();
+            $table->foreignId('created_by')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamps();
         });
     }

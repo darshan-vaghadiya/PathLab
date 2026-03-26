@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->constrained('orders')->cascadeOnDelete();
             $table->string('report_number')->unique();
-            $table->foreignId('approved_by')->constrained('users')->nullOnDelete();
+            $table->foreignId('approved_by')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamp('approved_at');
             $table->string('pdf_path')->nullable();
             $table->text('notes')->nullable();

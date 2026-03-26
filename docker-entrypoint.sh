@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-echo ">> Running migrations..."
-php artisan migrate --force
+echo ">> Running fresh migrations..."
+php artisan migrate:fresh --force
 
 echo ">> Seeding database (if not already seeded)..."
 php artisan db:seed --force 2>/dev/null || echo ">> Seeding skipped (already seeded or error)"

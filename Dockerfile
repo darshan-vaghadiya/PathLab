@@ -34,14 +34,13 @@ RUN npm run build
 # Run post-install scripts
 RUN composer dump-autoload --optimize
 
-# Cache config and routes
-RUN php artisan config:clear \
-    && php artisan route:clear \
-    && php artisan view:clear
-
 # Set permissions
 RUN chmod -R 775 storage bootstrap/cache
 
+# Copy and prepare entrypoint
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
 EXPOSE 8080
 
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080
+CMD ["/docker-entrypoint.sh"]
